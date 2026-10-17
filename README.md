@@ -30,8 +30,8 @@ Los sistemas originales LPKF ProtoMat emplean una unidad de extracción de polvo
 ```text
 DES-Ctrl/
 ├── hardware/
-│   ├── pcb1_sniffer/     # Interceptor UART con salida TTL
-│   └── pcb2_controller/  # Microcontrolador y etapa de potencia con detección de cruce por cero
-├── firmware/             # Firmware de MCU para la decodificación y control de motores
-├── docs/                 # Notas técnicas, capturas de protocolos y esquemas
-└── LICENSE               # MIT Open Source License
+│   ├── pcb1_sniffer/       # Interceptor UART con salida TTL
+│   └── pcb2_controller/    # Microcontrolador y etapa de potencia con detección de cruce por cero
+├── firmware/               # Firmware de MCU para la decodificación y control de motores
+├── docs/                   # Notas técnicas, capturas de protocolos y esquemas
+└── LICENSE                 # MIT Open Source License
