@@ -19,7 +19,7 @@ Los sistemas originales LPKF ProtoMat emplean una unidad de extracción de polvo
 
 ## PCB1 Sniffer
 
-| Schematic | Layout | 3d-Model |
+| Schematic | Layout | 3D-Model |
 | :--------: | :--------: | :--------: |
 | <img src="_media/pcb1_sniffer-sch.png" height="300"> | <img src="_media/pcb1_sniffer-pcb.png" height="300"> | <img src="_media/pcb1_sniffer-3d.png" height="300">  |
 
