@@ -3,32 +3,29 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![KiCad](https://img.shields.io/badge/KiCad-EDA-blue.svg)](https://kicad.org/)
 
-Open-source hardware and firmware solution designed to replicate and control the vacuum dust extraction interface for **LPKF ProtoMat** circuit board plotters using affordable commercial vacuum systems.
+Solución de hardware y firmware de código abierto diseñada para replicar y controlar la interfaz de extracción de polvo mediante aspiración en las trazadoras de placas de circuito impreso **LPKF ProtoMat**, utilizando sistemas de aspiración comerciales asequibles.
 
-Developed as an academic project for **Laboratorio de Electrónica III** at the School of Electrical Engineering, **Universidad de Los Andes (ULA)**, Mérida, Venezuela.
+Desarrollado como proyecto académico para la asignatura **Laboratorio de Electrónica III** en la Escuela de Ingeniería Eléctrica de la **Universidad de Los Andes (ULA)**, Mérida, Venezuela.
 
 ---
 
-## Project Overview
+## Descripción general del proyecto
 
-Original LPKF ProtoMat systems utilize a synchronized vacuum dust extraction unit controlled via a serial UART interface (9600 bps) linked directly from the milling machine. When original extraction units are missing or unavailable, replacing them with proprietary hardware is cost-prohibitive. 
+Los sistemas originales LPKF ProtoMat emplean una unidad de extracción de polvo por vacío sincronizada, controlada mediante una interfaz serie UART conectada directamente a la fresadora. Cuando las unidades de extracción originales no están presentes o no se encuentran disponibles, su sustitución por hardware específico resulta económicamente prohibitiva.
 
-**DES-Ctrl** solves this challenge through a two-stage hardware approach:
-1. **PCB1 (Sniffer / Man-in-the-Middle):** A passive/active diagnostic interface featuring DB9 male/female connectors and test points to intercept, log, and analyze UART communication packets between an LPKF ProtoMat (S63/C30) and its original dust extraction system.
-2. **PCB2 (Controller & Power Stage):** An embedded microcontroller board equipped with zero-crossing detection and triac/thyristor switching to regulate speed and power for a standard 110VAC commercial wet/dry vacuum cleaner, perfectly synchronized with LPKF G-code / machine states.
+**DES-Ctrl** resuelve este desafío mediante un enfoque de hardware de dos etapas:
+1. **PCB1 (Sniffer / Man-in-the-Middle):** Una interfaz de diagnóstico (pasiva/activa) que cuenta con conectores DB9 macho/hembra y puntos de prueba para interceptar, registrar y analizar los paquetes de comunicación UART entre una LPKF ProtoMat y su sistema original de extracción de polvo.
+2. **PCB2 (Controlador y etapa de potencia):** Una placa con microcontrolador integrado, equipada con detección de cruce por cero y conmutación mediante triac/tiristor, diseñada para regular la velocidad y la potencia de una aspiradora comercial estándar y los estados operativos de la máquina LPKF.
 
 ---
 
 ## Repository Structure
 
 ```text
-des_ctrl/
+DES-Ctrl/
 ├── hardware/
-│   ├── pcb1_sniffer/          # LPKF UART Interceptor & Test Points
-│   │   ├── schematics/        # KiCad schematic files (.kicad_sch)
-│   │   ├── layout/            # PCB layout files (.kicad_pcb)
-│   │   └── 3d_models/         # STEP / 3D rendering models
-│   └── pcb2_controller/       # Microcontroller & AC Zero-Crossing Power Stage
-├── firmware/                  # MCU firmware for packet decoding and motor control
-├── docs/                      # Technical notes, protocol captures, and schematics
+│   ├── pcb1_sniffer/          # Interceptor UART y puntos de prueba de LPKF
+│   └── pcb2_controller/       # Microcontrolador y etapa de potencia con detección de cruce por cero
+├── firmware/                  # Firmware de MCU para la decodificación de paquetes y el control de motores
+├── docs/                      # Notas técnicas, capturas de protocolos y esquemas
 └── LICENSE                    # MIT Open Source License
