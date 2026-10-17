@@ -17,6 +17,12 @@ Los sistemas originales LPKF ProtoMat emplean una unidad de extracción de polvo
 1. **PCB1 (Sniffer / Man-in-the-Middle):** Una interfaz de diagnóstico (pasiva/activa) que cuenta con conectores DB9 macho/hembra y puntos de prueba para interceptar, registrar y analizar los paquetes de comunicación UART entre una LPKF ProtoMat y su sistema original de extracción de polvo.
 2. **PCB2 (Controlador y etapa de potencia):** Una placa con microcontrolador integrado, equipada con detección de cruce por cero y conmutación mediante triac/tiristor, diseñada para regular la velocidad y la potencia de una aspiradora comercial estándar y los estados operativos de la máquina LPKF.
 
+## PCB1 Sniffer
+
+| Schematic | Layout | 3d-Model |
+| :--------: | :--------: | :--------: |
+| <img src="_media/pcb1_sniffer-sch.png" height="300"> | <img src="_media/pcb1_sniffer-pcb.png" height="300"> | <img src="_media/pcb1_sniffer-3d.png" height="300">  |
+
 ---
 
 ## Repository Structure
